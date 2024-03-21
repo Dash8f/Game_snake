@@ -69,12 +69,16 @@ TextUI();
 virtual ~TextUI();
 
 virtual void draw();
-//virtual void draw_snake(std::vector<std::pair<int, int>> coordinates);
 
 private:
 void clear_screen() const;
 
 void set_color(Color color_) const;
+
+void draw_line(char left_char, char mid_char, char right_char);
+void draw_frame(Color color_);
+void draw_in_coords(int x_coord, int y_coord, char symbol, Color color_);
+void draw_snake(std::vector<std::pair<int, int>> coords_, Color color_);
 };
 
 class GraphUI : public UI
@@ -84,5 +88,7 @@ GraphUI();
 virtual ~GraphUI();
 
 virtual void draw();
-//virtual void draw_snake(std::vector<std::pair<int, int>> coordinates);
+
+private:
+void draw_frame();
 };
