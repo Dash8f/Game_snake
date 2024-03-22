@@ -7,7 +7,7 @@ Game::Snake::Snake()
 {
     lenght = 1;
 
-    coordinates.push_back({0, 0});
+    coordinates.push_back({5, 5});
 }
 
 void Game::Snake::move_head(int new_x, int new_y)
@@ -35,4 +35,9 @@ void Game::Snake::increase_snake()
 std::pair<int, int> Game::Snake::get_head_coord()
 {
     return coordinates[0];
+}
+
+Game::Game(UI& ui_) : ui(ui_)
+{
+    snake.coordinates.push_back({{5},{5}});
 }

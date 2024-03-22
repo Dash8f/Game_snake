@@ -10,13 +10,7 @@
 
 class Game
 {
-private:
-UI& ui;
-
 public:
-Game(UI& ui_) : ui(ui_) {};
-~Game() {};
-
 class Snake
 {
 public:
@@ -39,5 +33,15 @@ class Rabbit
 {
 
 };
+
+public:
+Snake snake;
+
+private:
+UI& ui;
+
+public:
+Game(UI& ui_);
+~Game() {};
 };
 

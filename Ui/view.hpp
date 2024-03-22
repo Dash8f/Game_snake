@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../Game/game.hpp"
+
 #include <sys/ioctl.h>
 #include <string>
 #include <termios.h>
